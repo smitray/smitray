@@ -1,38 +1,12 @@
-import { graphql, PageProps } from 'gatsby';
 import React from 'react';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
-// Please note that you can use https://github.com/dotansimha/graphql-code-generator
-// to generate all types from graphQL schema
-interface IndexPageProperties extends PageProps {
-  data: {
-    site: {
-      siteMetadata: {
-        siteName: string;
-      };
-    };
-  };
-}
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        siteName
-      }
-    }
-  }
-`;
-
-const IndexPage = ({
-  data: {
-    site: {
-      siteMetadata: { siteName },
-    },
-  },
-}: IndexPageProperties) => (
-  <p className="text-lg text-center bg-red-500">
-    This site is named <strong>{siteName}</strong>
-  </p>
+const IndexPage = () => (
+  <Layout>
+    <SEO />
+    <p className="text-white bg-red-500 text-8xl font-brand">Hello world</p>
+  </Layout>
 );
 
 export default IndexPage;

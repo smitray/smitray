@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-text-base: 31, 27, 28;
+    --color-fill: 252, 252, 252;
+  }
+}

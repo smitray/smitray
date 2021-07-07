@@ -11,8 +11,12 @@ module.exports = {
       options: { parser: 'yaml' },
     },
     {
-      files: 'LICENSE',
+      files: '*.md',
       options: { parser: 'markdown' },
+    },
+    {
+      files: '*.mdx',
+      options: { parser: 'mdx' },
     },
   ],
 };
